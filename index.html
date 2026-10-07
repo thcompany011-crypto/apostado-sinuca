@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0b0d10"><meta name="description" content="Apostado Sinuca — controle simples de partidas e apostas.">
+<title>Apostado Sinuca</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar"><div><span class="eyebrow">CONTROLE DE MESA</span><h1>🎱 Apostado Sinuca</h1><p>Partidas rápidas • até 5 jogadores na fila</p></div><button id="newSessionBtn" class="btn btn-ghost" type="button">Nova rodada</button></header>
+<main class="layout">
+<section class="hero-grid">
+<article class="card match-card"><div class="section-head"><div><span class="label">PARTIDA ATUAL</span><h2 id="matchNumber">Jogo #001</h2></div><span id="matchStatus" class="status status-waiting">Aguardando</span></div>
+<div id="playersOnTable" class="players-vs"><div class="player-slot empty-slot">Adicione jogadores para começar</div></div>
+<div class="bet-row"><label>Valor da aposta<div class="money-input"><span>R$</span><input id="betInput" inputmode="decimal" type="number" min="0" step="0.01" value="10.00"></div></label><div class="match-info"><span>Valor em jogo</span><strong id="currentBet">R$ 10,00</strong></div></div>
+<div class="winner-actions"><button id="winPlayer1" class="btn btn-primary" type="button" disabled>🏆 Vitória</button><button id="winPlayer2" class="btn btn-primary" type="button" disabled>🏆 Vitória</button></div>
+<p id="matchHint" class="hint">Cadastre pelo menos 2 jogadores para iniciar.</p></article>
+<article class="card queue-card"><div class="section-head"><div><span class="label">MESA / FILA</span><h2>Jogadores</h2></div><span id="playerCount" class="counter">0/5</span></div>
+<form id="playerForm" class="add-player"><input id="playerName" type="text" maxlength="30" autocomplete="off" placeholder="Nome do jogador" required><button class="btn btn-primary" type="submit">Adicionar</button></form>
+<div id="queueList" class="queue-list"></div><p class="hint">Os dois primeiros jogam. Quando alguém perde, sai e o próximo entra automaticamente.</p></article>
+</section>
+<section class="stats-grid"><article class="stat-card"><span>Partidas</span><strong id="totalMatches">0</strong></article><article class="stat-card"><span>Valor movimentado</span><strong id="totalMoney">R$ 0,00</strong></article><article class="stat-card"><span>Vitórias registradas</span><strong id="totalWins">0</strong></article><article class="stat-card"><span>Jogadores na fila</span><strong id="waitingCount">0</strong></article></section>
+<section class="content-grid">
+<article class="card ranking-card"><div class="section-head"><div><span class="label">RANKING</span><h2>Desempenho</h2></div></div><div id="rankingList" class="ranking-list"><div class="empty-state">Nenhum resultado ainda.</div></div></article>
+<article class="card history-card"><div class="section-head"><div><span class="label">HISTÓRICO</span><h2>Últimas partidas</h2></div><button id="clearHistoryBtn" class="btn btn-danger-outline" type="button">Limpar</button></div><div id="historyList" class="history-list"><div class="empty-state">As partidas aparecerão aqui.</div></div></article>
+</section>
+</main></div><div id="toast" class="toast" role="status" aria-live="polite"></div><script src="app.js"></script>
+</body></html>
