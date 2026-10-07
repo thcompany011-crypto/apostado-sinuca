@@ -16,7 +16,10 @@
 <div class="winner-actions"><button id="winPlayer1" class="btn btn-primary" type="button" disabled>🏆 Vitória</button><button id="winPlayer2" class="btn btn-primary" type="button" disabled>🏆 Vitória</button></div>
 <p id="matchHint" class="hint">Cadastre pelo menos 2 jogadores para iniciar.</p></article>
 <article class="card queue-card"><div class="section-head"><div><span class="label">MESA / FILA</span><h2>Jogadores</h2></div><span id="playerCount" class="counter">0/5</span></div>
-<form id="playerForm" class="add-player"><input id="playerName" type="text" maxlength="30" autocomplete="off" placeholder="Nome do jogador" required><button class="btn btn-primary" type="submit">Adicionar</button></form>
+<form id="playerForm" class="add-player"><input id="playerName" type="text" maxlength="30" autocomplete="off" placeholder="Cadastrar novo jogador" required><button class="btn btn-primary" type="submit">Cadastrar</button></form>
+<div class="saved-head"><span class="label">JOGADORES CADASTRADOS</span><span class="hint-inline">Clique em um nome para colocar na fila</span></div>
+<div id="savedPlayersList" class="saved-players-list"></div>
+<div class="saved-head queue-head"><span class="label">NA MESA / FILA ATUAL</span></div>
 <div id="queueList" class="queue-list"></div><p class="hint">Os dois primeiros jogam. Quando alguém perde, sai e o próximo entra automaticamente.</p></article>
 </section>
 <section class="stats-grid"><article class="stat-card"><span>Partidas</span><strong id="totalMatches">0</strong></article><article class="stat-card"><span>Valor movimentado</span><strong id="totalMoney">R$ 0,00</strong></article><article class="stat-card"><span>Vitórias registradas</span><strong id="totalWins">0</strong></article><article class="stat-card"><span>Jogadores na fila</span><strong id="waitingCount">0</strong></article></section>
